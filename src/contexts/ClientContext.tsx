@@ -1,7 +1,6 @@
 import Client from "@walletconnect/sign-client";
 import { PairingTypes, SessionTypes } from "@walletconnect/types";
 import { Web3Modal } from "@web3modal/standalone";
-import { DAppConnector } from "@hashgraph/hedera-wallet-connect";
 import { LedgerId } from "@hashgraph/sdk";
 
 import {
@@ -107,9 +106,9 @@ export function ClientContextProvider({
       );
 
       const balances: AccountBalances = {};
-      arr.forEach(({ account, assets }) => {
-        balances[account] = assets;
-      });
+      // arr.forEach(({ account, assets }) => {
+      //   balances[account] = assets;
+      // });
       setBalances(balances);
     } catch (e) {
       console.error(e);

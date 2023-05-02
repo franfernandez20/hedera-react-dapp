@@ -1,6 +1,3 @@
-if (!process.env.NEXT_PUBLIC_PROJECT_ID)
-  throw new Error("`NEXT_PUBLIC_PROJECT_ID` env variable is missing.");
-
 export const DEFAULT_CHAINS = ["hedera:295", "hedera:296", "hedera:297"];
 
 export const DEFAULT_PROJECT_ID = process.env.NEXT_PUBLIC_PROJECT_ID || "ce06497abf4102004138a10edd29c921";

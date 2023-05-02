@@ -1,13 +1,9 @@
 import { utils } from "ethers";
 import { createContext, ReactNode, useContext, useState } from "react";
-import {
-  getLocalStorageTestnetFlag,
-} from "../helpers";
 import { useWalletConnectClient } from "./ClientContext";
 import {
   DEFAULT_HEDERA_METHODS,
 } from "../constants";
-import { signatureVerify, cryptoWaitReady } from "@polkadot/util-crypto";
 
 
 import {
