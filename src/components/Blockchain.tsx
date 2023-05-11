@@ -9,7 +9,7 @@ import Loader from "./Loader";
 import {
   AccountAction,
   AccountBalances,
-  getNameByChainId
+  getNameAndID
 } from "../helpers";
 import { fonts } from "../styles";
 
@@ -109,7 +109,7 @@ const Blockchain: FC<PropsWithChildren<BlockchainProps>> = (
         className={active ? "active" : ""}
       >
         <SChain>
-          <p>{getNameByChainId(chainId)}</p>
+          <p>{getNameAndID(chainId)}</p>
         </SChain>
         {!!address && <p>{address}</p>}
         <SBlockchainChildrenContainer>

@@ -9,9 +9,9 @@ chainsMap.set(LedgerId.PREVIEWNET.toString(), 297);
 const chainsNames: {
   [key: string]: string
 } = {
-  295: "Mainnet (295)",
-  296: "Testnet (296)",
-  297: "Previewnet (297)",
+  295: "mainnet",
+  296: "testnet",
+  297: "previewnet",
 }
 
 export enum METHODS {
@@ -41,6 +41,9 @@ export const getChainByLedgerId = (ledgerId: LedgerId): string => {
 export const getNameByChainId = (chainId: string): string => {
   const ledgerId = chainId.split(":")[1];
   return chainsNames[ledgerId];
+}
+export const  getNameAndID =(chainId: string): string => {
+    return getNameByChainId(chainId)+`(${chainId.split(":")[1]})`
 }
 
 export const getLedgerIdByChainId = (chainId: string): LedgerId => {
