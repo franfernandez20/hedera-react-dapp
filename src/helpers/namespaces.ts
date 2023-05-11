@@ -9,9 +9,9 @@ chainsMap.set(LedgerId.PREVIEWNET.toString(), 297);
 const chainsNames: {
   [key: string]: string
 } = {
-  295: "mainnet",
-  296: "testnet",
-  297: "previewnet",
+  295: "Mainnet (295)",
+  296: "Testnet (296)",
+  297: "Previewnet (297)",
 }
 
 export enum METHODS {

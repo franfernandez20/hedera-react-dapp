@@ -10,6 +10,7 @@ interface DropdownProps {
 }
 
 const SelectContainer = styled.select`
+
   width: 150px;
   background: transparent;
   color: black;
@@ -18,14 +19,18 @@ const SelectContainer = styled.select`
   padding: 2px;
   font-size: "1.25em";
   position: absolute;
-  bottom: 40px;
-  left: 50px;
+  bottom: 55px;
+  left: 55px;
   direction: ltr;
   unicode-bidi: embed;
+  
+  
 `;
 
 const SelectOption = styled.option`
+  
   font-size: "1.25em";
+  color:#483d8b;
 `;
 
 const Dropdown = (props: DropdownProps) => {
@@ -44,11 +49,11 @@ const Dropdown = (props: DropdownProps) => {
         width: 250,
         display: "flex",
         justifyContent: "center",
-        alignItems: "flex-end",
+        alignItems: "flex-end"
       }}
     >
-      <button onClick={openDropdown} style={{ background: "transparent" }}>
-        <Icon size={30} src={"/assets/settings.svg"} />
+      <button  onClick={openDropdown} style={{background: "transparent", cursor: "pointer" }}>
+        <Icon size={35} src={"/assets/setting.png"} />
       </button>
       {openSelect && (
         <SelectContainer
@@ -66,7 +71,7 @@ const Dropdown = (props: DropdownProps) => {
             );
           })}
         </SelectContainer>
-      )}
+      )} 
     </div>
   );
 };

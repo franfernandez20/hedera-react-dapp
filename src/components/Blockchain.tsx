@@ -22,28 +22,23 @@ const SAccount = styled.div<AccountStyleProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 8px;
   margin: 5px 0;
+  background: 	#CBC6E6;
   border: ${({ rgb }) => `2px solid rgb(${rgb})`};
   &.active {
-    box-shadow: ${({ rgb }) => `0 0 8px rgb(${rgb})`};
+    box-shadow: ${({ rgb }) => `0 0 10px rgb(${rgb})`};
   }
 `;
 
 const SChain = styled.div`
   width: 100%;
-  display: flex;
+  display: grid;
   align-items: center;
-  & p {
-    font-weight: 600;
-  }
-  & img {
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-  }
+  text-align:center;
+  font-size:16px;
+  font-weight: 600;
 `;
 
 const SContainer = styled.div`
@@ -109,13 +104,12 @@ const Blockchain: FC<PropsWithChildren<BlockchainProps>> = (
   return (
     <React.Fragment>
       <SAccount
-        rgb="218, 104, 167"
+        rgb="72,61,139"
         onClick={() => onClick && onClick(chainId)}
         className={active ? "active" : ""}
       >
         <SChain>
-          <img src="/assets/westend-logo.svg" alt={chainId} />
-          <p>{chainId} - {getNameByChainId(chainId)}</p>
+          <p>{getNameByChainId(chainId)}</p>
         </SChain>
         {!!address && <p>{address}</p>}
         <SBlockchainChildrenContainer>

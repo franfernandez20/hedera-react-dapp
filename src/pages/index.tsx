@@ -24,6 +24,7 @@ import {
   SContent,
   SLanding,
   SLayout,
+  SSelect,
   SToggleContainer,
 } from "../components/app";
 import { useWalletConnectClient } from "../contexts/ClientContext";
@@ -150,9 +151,12 @@ const Home: NextPage = () => {
     return !accounts.length && !Object.keys(balances).length ? (
       <SLanding center>
         <Banner />
-        <h6>{`Using v${version || "2.0.0-beta"}`}</h6>
+        <h6 >{`Using v${version || "2.0.0-beta"}`}</h6>
         <SButtonContainer>
-          <h6>Select chains:</h6>
+          <SSelect>
+            <img src="/assets/hedera-hbar-logo.png" alt={chainId}/> 
+            <h6>Select chains:</h6>
+          </SSelect>
           {chainOptions.map((chain) => (
             <Blockchain
               key={chain}
