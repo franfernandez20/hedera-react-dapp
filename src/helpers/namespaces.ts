@@ -42,6 +42,9 @@ export const getNameByChainId = (chainId: string): string => {
   const ledgerId = chainId.split(":")[1];
   return chainsNames[ledgerId];
 }
+export const  getNameAndID =(chainId: string): string => {
+    return getNameByChainId(chainId)+`(${chainId.split(":")[1]})`
+}
 
 export const getLedgerIdByChainId = (chainId: string): LedgerId => {
   const name = getNameByChainId(chainId);

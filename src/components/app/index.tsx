@@ -10,7 +10,17 @@ export const SLayout = styled.div`
   min-height: 100vh;
   text-align: center;
 `;
-
+export const SSelect= styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 0 10px;
+  & img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+`;
 export const SContent = styled(Wrapper as any)`
   width: 100%;
   height: 100%;
@@ -19,15 +29,19 @@ export const SContent = styled(Wrapper as any)`
 
 export const SLanding = styled(Column as any)`
   /* height: 600px; */
+  color:DarkSlateBlue;
 `;
 
 export const SButtonContainer = styled(Column as any)`
+
   width: 250px;
   margin: 50px 0;
+  
 `;
 
 export const SConnectButton = styled(Button as any)`
-  border-radius: 8px;
+  border-radius: 10px;
+  background:#483D8B;
   font-size: ${fonts.size.medium};
   height: 44px;
   width: 100%;

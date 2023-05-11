@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 const SBannerWrapper = styled.div`
+  padding-top: 15px;
   display: flex;
   align-items: center;
   position: relative;
