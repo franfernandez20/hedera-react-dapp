@@ -175,26 +175,28 @@ const Home: NextPage = () => {
         </SButtonContainer>
       </SLanding>
     ) : (
-      <SAccountsContainer>
-        <h3>Accounts</h3>
-        <SAccounts>
-          {accounts.map((account) => {
-            const [namespace, reference, address] = account.split(":");
-            const chainId = `${namespace}:${reference}`;
-            return (
-              <Blockchain
-                key={account}
-                active={true}
-                fetching={isFetchingBalances}
-                address={address}
-                chainId={chainId}
-                balances={balances}
-                actions={getActions()}
-              />
-            );
-          })}
-        </SAccounts>
-      </SAccountsContainer>
+      <SLanding center>
+        <SAccountsContainer>
+          <h3>Accounts</h3>
+          <SAccounts>
+            {accounts.map((account) => {
+              const [namespace, reference, address] = account.split(":");
+              const chainId = `${namespace}:${reference}`;
+              return (
+                <Blockchain
+                  key={account}
+                  active={true}
+                  fetching={isFetchingBalances}
+                  address={address}
+                  chainId={chainId}
+                  balances={balances}
+                  actions={getActions()}
+                />
+              );
+            })}
+          </SAccounts>
+        </SAccountsContainer>
+      </SLanding>
     );
   };
 

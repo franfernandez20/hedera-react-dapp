@@ -8,7 +8,8 @@ export const SModalContainer = styled.div`
 
 export const SModalTitle = styled.div`
   margin: 1em 0;
-  font-size: 20px;
+  color: white;
+  font-size: 28px;
   font-weight: 700;
 `;
 

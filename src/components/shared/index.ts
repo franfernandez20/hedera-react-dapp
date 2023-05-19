@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const SContainer = styled.div`
-  height: 100%;
   min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   word-break: break-word;
 `;
