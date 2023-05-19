@@ -18,16 +18,14 @@ const SPairingContainer = styled.div`
 const Pairing = (props: PairingProps) => {
   const { peerMetadata } = props.pairing;
   return (
-    <SPairingContainer onClick={props.onClick}>
-      <div>
+      <button className="btnPairing" onClick={props.onClick}>
         {typeof peerMetadata !== "undefined" ? (
           // <Peer oneLiner metadata={peerMetadata} />
           <p>{peerMetadata.name}</p>
         ) : (
           <div>{`Unknown Wallet`}</div>
         )}
-      </div>
-    </SPairingContainer>
+      </button>
   );
 };
 

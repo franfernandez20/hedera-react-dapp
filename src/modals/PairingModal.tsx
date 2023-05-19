@@ -27,7 +27,7 @@ const PairingModal = (props: PairingModalProps) => {
           />
         ))}
       </STable>
-      <Button onClick={() => connect()}>{`New Pairing`}</Button>
+      <button className='btn' onClick={() => connect()}>{`New Pairing`}</button>
     </SModalContainer>
   );
 };
